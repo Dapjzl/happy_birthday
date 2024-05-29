@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#backgroundVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #d74a4a;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+p {
+    font-size: 1.4rem;
+    color: #555;
+    animation: fadeIn 3s ease-in-out;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.2rem;
+    color: white;
+    background: #d74a4a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    animation: bounce 2s infinite;
+}
+
+button:hover {
+    background: #b83b3b;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+#surpriseMessage img {
+    margin-top: 1rem;
+    width: 250px;
+    animation: fadeIn 4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
